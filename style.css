@@ -1,0 +1,125 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f5f5dc; /* Off-white background */
+    color: #333; /* Dark text for contrast */
+}
+
+header {
+    background-color: #a7c4bc; /* Sage green header */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+#hero {
+    background-color: #d0e8ce; /* Lighter sage green for hero section */
+    padding: 100px 0;
+    text-align: center;
+    position: relative; /* For plant overlay */
+    overflow: hidden; /* Hide overflowing plants */
+}
+
+.hero-content {
+    position: relative; /* Bring content above the plants */
+    z-index: 1; /* Ensure content is visible */
+}
+
+.plant-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background-image: url("vine.png"); /* Replace with your plant image */
+    background-size: contain; /* Or cover, depending on your image */
+    background-repeat: no-repeat;
+    background-position: bottom left; /* Position the plant */
+}
+
+.plant-overlay.right {
+    left: auto;
+    right: 0;
+    transform: scaleX(-1); /* Flip the image horizontally */
+    background-position: bottom right;
+}
+
+/* ... other styles for about, projects, contact sections ... */
+section {
+    padding: 40px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+footer {
+    background-color: #a7c4bc;
+    padding: 20px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8ab397; /* Slightly darker sage green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#projects {
+    padding: 20px; /* Add some padding around the section */
+  }
+  
+  #projects h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+  }.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between grid items */
+  }.project {
+    border: 1px solid #ccc; /* Optional border for the project boxes */
+    padding: 10px; /* Padding inside each project box */
+    text-align: center; /* Center the content within each project */
+    overflow: hidden; /* Important for object-fit: cover */
+  }.project h3 {
+    margin-bottom: 10px; /* Space below the heading */
+  }.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or contain, depending on your preference */
+    display: block; /* Prevents a small space below the image */
+  }
+  
+  /* Optional: Add some hover effects */.project:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: Style for smaller screens */
+  @media (max-width: 768px) {
+  .project-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+    }
+  }
